@@ -1,0 +1,9 @@
+CREATE TABLE User(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(40) NOT NULL,
+    surname VARCHAR(40),
+    families VARCHAR(40) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE(email)
+);

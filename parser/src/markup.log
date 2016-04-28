@@ -1,0 +1,34 @@
+# some comments are going here...
+
+
+/* and some strange text here:
+    ;fgsdl /// "" ;;99)*( ##,./<>?]['q][21*&(^%@!$)(
+
+   */
+
+name optional {
+       #    one more simple comment here
+    /* and here  */
+    inner_name "inner_value"{}
+
+}/* and here  */
+
+name = value;
+name = ",./<>?@!#$^%^&*&*(*)(-+_      spaces        tabs
+
+EOLS/*  */  #comment";
+
+check_back_slash = "\\\t\n\"l";
+
+name optional {
+
+}
+
+name optional2 with more values "!@#$%^&*()_+-="
+
+{}
+
+   /*
+*/
+
+#

@@ -1,0 +1,10 @@
+CREATE TABLE Family(
+    id INT NOT NULL AUTO_INCREMENT,
+    fName VARCHAR(40) NOT NULL,
+    fPassword VARCHAR(40) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    question VARCHAR(40) NOT NULL,
+    answer VARCHAR(40) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE(email)
+);

@@ -1,0 +1,37 @@
+#clean all
+DROP TABLE Item;
+DROP TABLE User;
+DROP TABLE Family;
+DROP DATABASE Budget;
+
+#init a database and create tables
+CREATE DATABASE Budget;
+USE Budget;
+CREATE TABLE Family(
+    id INT NOT NULL AUTO_INCREMENT,
+    fName VARCHAR(40) NOT NULL,
+    fPassword VARCHAR(40) NOT NULL,
+    question VARCHAR(40) NOT NULL,
+    answer VARCHAR(40) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE User(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(40) NOT NULL,
+    surname VARCHAR(40),
+    families INT NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (families)
+        REFERENCES Family(id)
+);
+CREATE TABLE Item(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(40),
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    price FLOAT(8,2) NOT NULL,
+    user INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user)
+        REFERENCES User(id)
+);
